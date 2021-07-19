@@ -1,0 +1,9 @@
+.carouselImage{
+  max-height: 400px;
+  width: 100%;
+  /* max-width: 100%; */
+  /* object-position: center ;
+  overflow: hidden; */
+  /* object-fit: cover;
+  object-position: center */
+}

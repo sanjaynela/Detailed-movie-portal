@@ -1,0 +1,16 @@
+.nav-link.active-link{
+    color:white;
+}
+
+.nav-link{
+  color: grey;
+}
+
+.navbar{
+  background-color: black;
+}
+
+.navbar-brand{
+  color: white;
+}
+

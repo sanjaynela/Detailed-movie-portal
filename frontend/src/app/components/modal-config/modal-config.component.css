@@ -1,0 +1,105 @@
+row.cast{
+  max-width:400px;
+  height: 250px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+}
+
+.card.card-block {
+  min-height: 250px;
+  min-width: 200px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.row.flex-nowrap.overflow-auto.castRow {
+  max-width: 100%;
+}
+
+.card-text{
+  color:black;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-text.bold.center{
+  font-weight: bold;
+  color:black;
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.card-text.bold.center.as{
+  font-weight: bold;
+  color:black;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 17px;
+}
+
+.modal-body{
+  color: black;
+}
+
+.modal-title{
+  color: black;
+}
+
+.myCustomModalClass {
+  width: 700px;
+  height: 500px;
+}
+
+::ng-deep .myCustomModalClass{
+  width: 700px;
+  height: 500px;
+}
+
+.sizing{
+  width: 700px;
+  height: 500px;
+}
+
+img.imgModal{
+  max-height: 250px;
+}
+
+i.fa.fa-imdb {
+  font-size: 35px;
+  color: gold;
+  padding-right: 10px;
+}
+
+i.fa.fa-instagram {
+  font-size: 35px;
+  color: purple;
+  padding-right: 10px;
+}
+
+i.fa.fa-facebook-square {
+  font-size: 35px;
+  color: #1d01fe;
+  padding-right: 10px;
+}
+
+i.fa.fa-twitter {
+  font-size: 35px;
+  color: #1b95e0;
+  padding-right: 10px;
+}
+.my-custom-class .tooltip-inner {
+  background-color: darkgreen;
+  font-size: 125%;
+}
+.my-custom-class .arrow::before {
+  border-top-color: darkgreen;
+}
+
+h1.bio{
+  font-family: sans-serif;
+}

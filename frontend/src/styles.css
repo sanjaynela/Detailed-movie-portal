@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.mainBody{
+  background-color: rgba(5,8,51,255);
+  color:white;
+}
+
+.carousel-control-prev {
+  left: -60 !important;
+}
+
+ol.carousel-indicators {
+  margin-bottom: -40px;
+  left: -60;
+}

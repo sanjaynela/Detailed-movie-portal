@@ -1,0 +1,38 @@
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="row px-mx-auto">
+      <div *ngFor="let image of images; let i=index" [routerLink]="['/watch',image.type,image.id]">
+          <div *ngIf="image && i<6" class="col picsum-img-wrapper">
+            <img [src]="image.poster_path" alt="Movie Image" class="carouselImage">
+          </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="row">
+      <div *ngFor="let image of images; let i=index" [routerLink]="['/watch/movie',image.id]">
+          <div *ngIf="image && i>5 && i<12" class="col picsum-img-wrapper">
+            <img [src]="image.poster_path" alt="Movie Image" class="carouselImage">
+          </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="row">
+      <div *ngFor="let image of images; let i=index" [routerLink]="['/watch/movie',image.id]">
+          <div *ngIf="image && i>11 && i<18" class="col picsum-img-wrapper">
+            <img [src]="image.poster_path" alt="Movie Image" class="carouselImage">
+          </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="row">
+      <div *ngFor="let image of images; let i=index" [routerLink]="['/watch/movie',image.id]">
+          <div *ngIf="image && i>17 && i<24" class="col picsum-img-wrapper">
+            <img [src]="image.poster_path" alt="Movie Image" class="carouselImage">
+          </div>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div *ngIf="images[0]" class="picsum-img-wrapper" [routerLink]="['/watch/movie',images[0].id]">
+      <img [src]="images[0].poster_path" alt="Movie Image" class="carouselImage">
+    </div>
+    <!-- <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div> -->
+  </ng-template>
+  <ng-template ngbSlide>
+    <div *ngIf="images[1]" class="picsum-img-wrapper" [routerLink]="['/watch/movie',images[1].id]">
+      <img [src]="images[1].poster_path" alt="Movie Image" class="carouselImage">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div *ngIf="images[2]" class="picsum-img-wrapper" [routerLink]="['/watch/movie',images[2].id]">
+      <img [src]="images[2].poster_path" alt="Movie Image" class="carouselImage">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div *ngIf="images[3]" class="picsum-img-wrapper" [routerLink]="['/watch/movie',images[3].id]">
+      <img [src]="images[3].poster_path" alt="Movie Image" class="carouselImage">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div *ngIf="images[4]" class="picsum-img-wrapper" [routerLink]="['/watch/movie',images[4].id]">
+      <img [src]="images[4].poster_path" alt="Movie Image" class="carouselImage">
+    </div>
+  </ng-template>
+</ngb-carousel>
+</div>

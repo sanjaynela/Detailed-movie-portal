@@ -1,0 +1,9 @@
+.carouselImage{
+  max-height: 200;
+}
+
+
+
+ngb-carousel.carousel.slide {
+  padding-left: 50px;
+}

@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container mt-5">
+  <!--Youtube link and media details-->
+  <div class="row">
+    <div class="col-7">
+      <youtube-player
+        videoId={{videoObj.key}}
+        >
+      </youtube-player>
+    </div>
+    <div class="col-5 pl-3">
+      <div class="row-fluid">
+        <h1 class="details">{{showDetails.name}}</h1>
+      </div>
+      <div class="row-fluid">
+        <h5 class="tagline">{{showDetails.tagline}}</h5>
+      </div>
+      <div class="row-fluid details">
+        <span class="align-middle">{{showDetails.first_air_date}}</span>
+        <span class="pipe align-middle"> &#x7c; </span>
+        <span class="star align-middle">&#9733;</span>
+        <span class="align-middle">{{showDetails.vote_average}}</span>
+        <span class="pipe align-middle"> &#x7c; </span>
+        <span class="align-middle">{{showDetails.episode_run_time}}</span>
+
+
+      </div>
+      <div class="row-fluid">
+        <span>Genres : </span>
+      <span class="description">{{showDetails.genres}}</span>
+      </div>
+      <div class="row-fluid">
+        <span>Spoken Languages : </span>
+        <span class="description">{{showDetails.languages}}</span>
+      </div>
+      <div *ngIf="inListStatus">
+        <button type="button" class="btn btn-primary mt-4" (click)=removeFromWatchList(id)>Remove from Watchlist</button>
+      </div>
+      <div *ngIf="!inListStatus">
+        <button type="button" class="btn btn-primary mt-4" (click)=addToWatchList(id)>Add to Watchlist</button>
+      </div>
+      <div *ngIf="addStatus" class="mt-3">
+        <ngb-alert type="success">Added to watchlist.</ngb-alert>
+      </div>
+      <div *ngIf="removeStatus" class="mt-3">
+        <ngb-alert type="danger">Removed from watchlist.</ngb-alert>
+      </div>
+
+    </div>
+  </div>
+  <!--Description-->
+  <div class="row pt-3">
+    <h5>Description</h5>
+  </div>
+  <div class="row">
+    {{showDetails.overview}}
+  </div>
+  <!--Share-->
+  <div class="row pt-4">
+    <h5>Share</h5>
+  </div>
+  <div class="row">
+    <a class="fa fa-twitter"
+    href="https://twitter.com/intent/tweet?text=Watch%20{{showDetails.name}}%20{{videoObj.url}}%20 #USC%20#CSCI571%20#FightOn"
+    target="_blank"
+    style="text-decoration: none;"
+    data-text="custom share text"
+    data-url="https://dev.twitter.com/web/tweet-button"
+    data-via="twitterdev"
+    data-related="twitterapi,twitter">
+    </a>
+    <div class="fb-share-button pl-2" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small">
+      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{videoObj.url}}" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <!--Cast-->
+
+  <div *ngIf="castDetailsList?.length" class="mt-5 row">
+    <h2>Full Cast and Crew</h2>
+    <div class="row flex-nowrap overflow-auto castRow">
+      <span *ngFor="let castDetail of castDetailsList">
+        <app-modal-config [castDetail]="castDetail"></app-modal-config>
+      </span>
+    </div>
+  </div>
+
+  <!--Reviews-->
+  <div class="row">
+    <span class="header">Reviews</span>
+    <span class="number">{{reviewsList.length}}</span>
+  </div>
+  <div *ngIf="reviewsList?.length">
+    <div class="card mb-3 row" *ngFor="let review of reviewsList; let i=index">
+      <div class="row" *ngIf="i<10">
+        <div class="col-2">
+          <div class="reviewImgContainer pl-5 pt-3">
+            <img src="{{review.avatar_path}}" alt="hello" class="reviewImg">
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="card-body">
+            <h2 class="card-title review">A review created by {{review.author}}</h2>
+            <div class="ratingBox">
+              <span class="ratingStar">&#9733;</span>
+              <span>{{review.rating}}</span>
+            </div>
+            <p class="card-text review"><small class="text-muted">Written by {{review.author}} on {{review.created_at}}</small></p>
+            <p class="card-text review">{{review.content}}</p>
+            <a href="{{review.url}}" target="_blank" class="review">Read the rest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Recommend Movies-->
+  <div class="row">
+    <h2 class="topHeader">Recommended Shows</h2>
+  </div>
+  <app-carousel-grid-show [showsImages] = "recommendedShowsList"></app-carousel-grid-show>
+
+  <!--Similar Movies-->
+  <div class="row">
+    <h2 class="topHeader">Similar Shows</h2>
+  </div>
+  <app-carousel-grid-show [showsImages] = "similarShowsList"></app-carousel-grid-show>
+  <div class="row mt-2 bottom"></div>
+</div>
+
+

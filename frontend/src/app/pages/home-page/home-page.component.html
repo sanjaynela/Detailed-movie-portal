@@ -1,0 +1,34 @@
+<!-- <div class="container">
+  <p>home-page works!</p>
+  <div *ngIf="currentPlayingMovies">
+    <div *ngFor="let movie of currentPlayingMovies; let i=index">
+      <div *ngIf="i<5">
+        {{movie.poster_path}}
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <app-carousel-basic [images] = "currentPlayingMovies"></app-carousel-basic>
+  <div *ngIf=continueWatchingList?.length>
+    <h3 class="topHeader">Continue Watching</h3>
+    <app-carousel-grid [images] = "continueWatchingList"></app-carousel-grid>
+  </div>
+  <h3 class="topHeader">Popular Movies</h3>
+  <app-carousel-grid [images] = "popularMovies"></app-carousel-grid>
+  <h3 class="topHeader">Top Rated Movies</h3>
+  <app-carousel-grid [images] = "topRatedMovies"></app-carousel-grid>
+  <h3 class="topHeader">Trending Movies</h3>
+  <app-carousel-grid [images] = "trendingMovies"></app-carousel-grid>
+  <h3 class="topHeader">Popular TV Shows</h3>
+  <app-carousel-grid-show [showsImages] = "popularShows"></app-carousel-grid-show>
+  <h3 class="topHeader">Top Rated TV Shows</h3>
+  <app-carousel-grid-show [showsImages] = "topRatedShows"></app-carousel-grid-show>
+  <h3 class="topHeader">Trending TV Shows</h3>
+  <app-carousel-grid-show [showsImages] = "trendingShows"></app-carousel-grid-show>
+  <div class="bottomDiv">
+
+  </div>
+</div>
+
+

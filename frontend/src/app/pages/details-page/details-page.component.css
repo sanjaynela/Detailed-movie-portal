@@ -1,0 +1,203 @@
+.tweet-button {
+  display: inline-block;
+  width: 55px;
+  height: 21px;
+  background-image: url(http://platform.twitter.com/widgets/images/tweet.dfbf1dd98bad9f5b5addd80494650dca.png);
+  background-position: 0 0;
+}
+.tweet-button:hover {
+  background-position: 0 -21px;
+  text-decoration: none;
+}
+
+.fa {
+  font-size: 30px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+  /* background: #55ACEE; */
+  color: #1b95e0;
+}
+
+i.fa.fa-facebook-square {
+  color: #1d01fe;
+}
+
+.row{
+  font-family: sans-serif;
+}
+
+h1.details{
+  font-family: sans-serif;
+}
+
+h5.tagline{
+  font-style: italic;
+  color:silver;
+}
+
+.row-fluid.details{
+  color: silver;
+}
+
+span.star{
+  color:silver;
+}
+
+span.pipe{
+  font-size: 30px;
+}
+
+span.description{
+  color:silver;
+}
+
+.row.cast{
+  max-width:400px;
+  height: 250px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+}
+
+.card.card-block {
+  min-height: 250px;
+  min-width: 200px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.row.flex-nowrap.overflow-auto.castRow {
+  max-width: 100%;
+}
+
+.card-text{
+  color:black;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-text.bold.center{
+  font-weight: bold;
+  color:black;
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.card-text.bold.center.as{
+  font-weight: bold;
+  color:black;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 17px;
+}
+
+.modal-body{
+  color: black;
+}
+
+.reviewImg{
+  height: 70px;
+  border-radius: 50%;
+}
+
+span.header{
+  font-size: 32px;
+  color: white;
+}
+
+span.number{
+  font-size: 32px;
+  color: silver;
+  padding-left: 20px;
+}
+
+.card-title{
+  color:black;
+  font-family: sans-serif;
+}
+
+.card-text.review{
+  text-align: initial;
+}
+
+.card-text.review{
+  text-align: initial;
+}
+
+.card-title.review{
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.card.mb-3.row {
+  min-height: 235px;
+  max-height: 225px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+p.card-text.review {
+  /* white-space: nowrap; */
+  /* width: 800px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* border: 1px solid #000000; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a.review{
+  text-decoration: underline;
+  color:initial;
+  background-color: initial;
+}
+
+.topHeader{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.carousel-control-prev {
+  left: -60 !important;
+}
+
+ol.carousel-indicators {
+  margin-bottom: -40px;
+  left: -60;
+}
+
+.row.mt-2.bottom{
+  height: 50px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.ratingBox{
+  display: inline-block;
+  background-color: black;
+  vertical-align: middle;
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
